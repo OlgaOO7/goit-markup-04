@@ -27,9 +27,11 @@
   --team-shadow-three-color: rgba(0 0 0 / 12%);
   --link-icon-background-color: #ffffff;
   --link-icon-grey-color: #afb1b8;
-  --portfolio-link-one-shadow-color: rgba(0 0 0 / 16%);
-  --portfolio-link-two-shadow-color: ;
-  --portfolio-link-three-shadow-color: ;
+  --portfolio-link-one-shadow-color: rgba(0, 0, 0, 0.16);
+  --hover-icon-fill: #757575;
+  --hero-backround-color: #c4c4c4;
+  --portfolio-link-two-shadow-color: rgba(0, 0, 0, 0.06);
+  --portfolio-link-three-shadow-color: rgba(0, 0, 0, 0.12);
 }
 
 body {
@@ -148,7 +150,9 @@ ol {
   letter-spacing: 0.02em;
   text-decoration: none;
   gap: 10px;
+  fill: var(--hover-icon-fill);
 }
+
 .contact-nav .link:hover,
 .contact-nav .link:focus {
   color: var(--accent-text-logo-color);
@@ -162,15 +166,17 @@ ol {
 /* Hero */
 
 .hero {
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
-  background-color: #c4c4c4;
+  background-color: var(--hero-backround-color);
   color: var(--white-text-color);
   text-align: center;
   background-image: linear-gradient(var(--hero-background-image), var(--hero-background-image)),
     url('../images/background-hero.jpg');
-  background-size: 1600px;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -313,10 +319,13 @@ img {
 
 .team .team-part {
   background-color: var(--main-background-color);
-  padding-bottom: 30px;
   border-radius: 4px;
   box-shadow: 0 2px 1px 0 var(--team-shadow-one-color), 0 1px 1px 0 var(--team-shadow-two-color),
     0 1px 3px 0 var(--team-shadow-three-color);
+}
+
+.group-social-link {
+  padding-bottom: 30px;
 }
 
 .team-part .team-subtitle {
@@ -417,7 +426,7 @@ img {
 
 .footer-flex {
   display: flex;
-  align-item: baseline;
+  align-items: baseline;
 }
 
 .footer .address {
@@ -542,6 +551,7 @@ img {
 /* portfolio  */
 
 .portfolio-link {
+  display: block;
   text-decoration: none;
 }
 
@@ -589,11 +599,11 @@ img {
   border: 1px solid var(--portfolio-list-border);
 }
 
-.flex-element:hover,
-.flex-element:focus {
-  box-shadow: 1px 4px 6px 0px var(--portfolio-link-one-shadow-color),
-    0px 4px 4px 0px var(--portfolio-link-two-shadow-color),
-    0px 1px 1px 0px var(--portfolio-link-three-shadow-color);
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px var(--portfolio-link-one-shadow-color),
+    0px 4px 4px var(--portfolio-link-two-shadow-color),
+    1px 4px 6px var(--portfolio-link-three-shadow-color);
 }
 
 .description {
